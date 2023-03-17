@@ -1,18 +1,26 @@
 import { getPodcasts } from "./api";
 
-const podCastContainer = document.querySelector(".section__podlist-pods");
+let podCastContainer = document.querySelector(".podlist");
+
+
 
 let i = 0;
 
 export async function createHtml() {
   const podCasts = await getPodcasts();
+  console.log(podCasts);
   podCasts.programs.forEach((podcast) => {
     i++;
     const innerArticle = createInnerArticle();
+    
 
     createImg();
+    
 
     const textDiv = createTextDiv();
+    //const imgPlacement = createImg();
+    //section__article-innerarticle
+    //section__article-div
 
     createHeader();
     createP();
@@ -20,15 +28,15 @@ export async function createHtml() {
 
     function createInnerArticle() {
       const innerArticle = document.createElement("article");
-      innerArticle.setAttribute("class", "section__article-innerarticle");
+      innerArticle.setAttribute("class", "podlist__podcast");
       innerArticle.setAttribute("tabindex", "1");
-      podCastContainer.appendChild(innerArticle);
+      podCastContainer?.appendChild(innerArticle);
       return innerArticle;
     }
 
     function createTextDiv() {
       const textDiv = document.createElement("div");
-      textDiv.setAttribute("class", "section__article-div");
+      textDiv.setAttribute("class", "podlist__podcast-content");
       innerArticle.appendChild(textDiv);
       return textDiv;
     }
@@ -47,6 +55,7 @@ export async function createHtml() {
       imgPlacement.setAttribute("width", "100");
       imgPlacement.setAttribute("height", "100");
       innerArticle.appendChild(imgPlacement);
+      return imgPlacement;
     }
 
     function createP() {
@@ -63,6 +72,27 @@ export async function createHtml() {
       textDiv.appendChild(headerPlacement);
     }
   });
+  
 }
 
 export default createHtml;
+
+// 9 articles but only 8 podcasts
+
+/*
+
+  function createInnerArticle () {
+    const innerArticle = document.createElement("article");
+    innerArticle.classList.add("section__article-innerarticle");
+    podCastContainer?.appendChild(innerArticle);
+    return innerArticle;
+  }
+
+  function createTextDiv() {
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("section__article-div");
+    
+  }
+
+
+*/
