@@ -1,12 +1,12 @@
 G
 
 - [ x ] Få projektet att funka
-- [ ] CSS till Sass
+- [ x ] CSS till Sass
 - [ ] Enhetlig namngivning i CSS:en
 - [ ] Konvertera till TypeScript
 - [ ] Enhetlig kodkvalitet
-- [x] Mobilvyn
-- [ ] Språk
+- [ x ] Mobilvyn
+- [ x ] Språk
 - [ ] Rensa loggning
 - [ ] Dokumentation
 - [ ] Tillgänglighet (bilder)
