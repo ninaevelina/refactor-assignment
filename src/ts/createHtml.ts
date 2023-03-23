@@ -1,6 +1,31 @@
 import { getPodcasts } from './api'
+import { displayPodcasts } from './displayPodcasts'
 import { Podcast } from './models/IPodcast'
 import { getApiPodcasts } from './services/podcastService'
+import { toggleDarkMode } from './toggleDarkmode'
+
+export async function createHtml (): void {
+  document.body.classList.add('darkmode')
+  const mainContent = document.body.querySelector('.maincontent') as HTMLDivElement
+  const toggleDarkModeButton: HTMLButtonElement = document.createElement('button')
+  const title = document.createElement('h1')
+  title.innerHTML = 'SRs Humorprogram'
+  toggleDarkModeButton.classList.add('section__podlist-button')
+  toggleDarkModeButton.classList.add('toggle-btn')
+  mainContent.appendChild(toggleDarkModeButton)
+  mainContent.appendChild(title)
+  //const toggleDarkModeButton: HTMLButtonElement = (document.querySelector('.toggle-btn') as HTMLButtonElement)
+  //toggleDarkModeButton.addEventListener('click', toggleDarkMode)
+  //toggleDarkModeButton.innerHTML = 'Blabla'
+  toggleDarkModeButton.addEventListener('click', () => {
+    toggleDarkMode()
+  })
+  const podcastList = document.createElement('article') as HTMLDivElement
+  podcastList.classList.add('podlist')
+  document.body.appendChild(podcastList)
+  await displayPodcasts()
+  console.log(toggleDarkModeButton)
+}
 
 //const podcasts: Podcast[] = await getApiPodcasts()
 
@@ -14,7 +39,7 @@ import { getApiPodcasts } from './services/podcastService'
   })
 }
 displayPodcasts(pod)*/
-
+/*
 const podCastContainer = document.querySelector('.podlist')
 
 let i = 0
@@ -125,3 +150,8 @@ export default createHtml
   }
 
 */
+/*
+export function createBlabla (): void {
+  const mainContent: HTMLDivElement = (document.querySelector('maincontent') as HTMLDivElement)
+
+}*/

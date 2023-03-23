@@ -1,10 +1,14 @@
-import "./src/scss/main.scss";
-import { createHtml } from "./src/ts/createHtml";
-import { toggleLightMode } from "./src/ts/toggleDarkmode";
+import './src/scss/main.scss'
+import { createHtml } from './src/ts/createHtml'
+import { displayPodcasts } from './src/ts/displayPodcasts'
+import { getSRPodcasts } from './src/ts/services/podcastService'
+import { toggleDarkMode } from './src/ts/toggleDarkmode'
 
 function init() {
-  toggleLightMode();
-  createHtml();
+  // toggleDarkMode()
+  createHtml()
+  // getSRPodcasts()
+  // displayPodcasts()
 }
 
-init();
+init()

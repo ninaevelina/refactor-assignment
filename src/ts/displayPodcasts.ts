@@ -1,9 +1,10 @@
-import { IPodcast } from './models/IPodcast'
+// import { IPodcast } from './models/IPodcast'
 import { getSRPodcasts } from './services/podcastService'
 
-export async function displayPodcasts () {
-  const podcastList = document.querySelector('podlist') as HTMLDivElement
+export async function displayPodcasts (): Promise<void> {
+  const podcastList = document.querySelector('.podlist') as HTMLDivElement
   const podcasts = await getSRPodcasts()
+  console.log(podcasts)
   podcasts.forEach((podcast) => {
     const podCastContainer: HTMLDivElement = (document.createElement('article') as HTMLDivElement)
     const podcastImage: HTMLImageElement = (document.createElement('IMG') as HTMLImageElement)
@@ -12,7 +13,7 @@ export async function displayPodcasts () {
     const podcastDescription = document.createElement('p')
     const podcastTitle = document.createElement('h2')
 
-    podCastContainer.classList.add('podlist_podcast')
+    podCastContainer.classList.add('podlist__podcast')
     podcastImage.src = podcast.socialimage
     podcastImage.alt = 'image for podcast'
     podcastContent.classList.add('podlist__podcast-content')
@@ -21,7 +22,7 @@ export async function displayPodcasts () {
     podcastDescription.innerHTML = podcast.description
     podcastTitle.innerHTML = podcast.name
 
-    podcastList?.appendChild(podCastContainer)
+    podcastList.appendChild(podCastContainer)
     podCastContainer.appendChild(podcastImage)
     podCastContainer.appendChild(podcastContent)
     podcastContent.appendChild(podcastTitle)
