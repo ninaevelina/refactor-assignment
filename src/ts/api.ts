@@ -6,6 +6,7 @@ export async function getPodcasts() {
     .then((json) => json)
     .catch((error) => {
       console.error("nått blev fel:", error)
+      console.log(data)
       return null
     })
 }
