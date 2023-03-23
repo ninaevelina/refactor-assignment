@@ -50,6 +50,7 @@ console.log(toggleDarkModeButton)
 export function toggleDarkMode (): void {
   document.body.classList.toggle('darkmode')
   const toggleDarkModeButton: HTMLButtonElement = document.querySelector('.section__podlist-button') as HTMLButtonElement
+  //toggleDarkModeButton.innerHTML = 'Välj mörkt läge'
   if (document.body.classList.contains('darkmode')) {
     if (toggleDarkModeButton !== null) {
       toggleDarkModeButton.innerHTML = 'Välj mörkt läge'

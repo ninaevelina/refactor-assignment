@@ -8,6 +8,7 @@ export async function createHtml (): void {
   document.body.classList.add('darkmode')
   const mainContent = document.body.querySelector('.maincontent') as HTMLDivElement
   const toggleDarkModeButton: HTMLButtonElement = document.createElement('button')
+  toggleDarkModeButton.innerHTML = 'Välj mörkt läge'
   const title = document.createElement('h1')
   title.innerHTML = 'SRs Humorprogram'
   toggleDarkModeButton.classList.add('section__podlist-button')
@@ -22,7 +23,8 @@ export async function createHtml (): void {
   })
   const podcastList = document.createElement('article') as HTMLDivElement
   podcastList.classList.add('podlist')
-  document.body.appendChild(podcastList)
+  //document.body.appendChild(podcastList)
+  mainContent.appendChild(podcastList)
   await displayPodcasts()
   console.log(toggleDarkModeButton)
 }

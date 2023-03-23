@@ -4,7 +4,7 @@ import { displayPodcasts } from './src/ts/displayPodcasts'
 import { getSRPodcasts } from './src/ts/services/podcastService'
 import { toggleDarkMode } from './src/ts/toggleDarkmode'
 
-function init() {
+function init () {
   // toggleDarkMode()
   createHtml()
   // getSRPodcasts()
