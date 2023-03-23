@@ -4,7 +4,6 @@ import { getSRPodcasts } from './services/podcastService'
 export async function displayPodcasts (): Promise<void> {
   const podcastList = document.querySelector('.podlist') as HTMLDivElement
   const podcasts = await getSRPodcasts()
-  console.log(podcasts)
   podcasts.forEach((podcast) => {
     const podCastContainer: HTMLDivElement = (document.createElement('article') as HTMLDivElement)
     const podcastImage: HTMLImageElement = (document.createElement('IMG') as HTMLImageElement)

@@ -55,11 +55,9 @@ export function toggleDarkMode (): void {
     if (toggleDarkModeButton !== null) {
       toggleDarkModeButton.innerHTML = 'Välj mörkt läge'
     }
-    console.log('mörkt läge')
   } else {
     if (toggleDarkModeButton !== null) {
       toggleDarkModeButton.innerHTML = 'Välj ljust läge'
-      console.log('ljust läge')
     }
   }
 }

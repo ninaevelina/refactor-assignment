@@ -26,7 +26,6 @@ export async function createHtml (): void {
   //document.body.appendChild(podcastList)
   mainContent.appendChild(podcastList)
   await displayPodcasts()
-  console.log(toggleDarkModeButton)
 }
 
 //const podcasts: Podcast[] = await getApiPodcasts()
