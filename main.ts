@@ -1,8 +1,8 @@
 import './src/scss/main.scss'
 import { createHtml } from './src/ts/createHtml'
 
-function init () {
-  createHtml()
+async function init (): Promise<void> {
+  await createHtml()
 }
 
-init()
+await init()
