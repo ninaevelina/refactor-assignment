@@ -1,4 +1,3 @@
-// import { IPodcast } from './models/IPodcast'
 import { getSRPodcasts } from './services/podcastService'
 
 export async function displayPodcasts (): Promise<void> {
