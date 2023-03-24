@@ -4,7 +4,7 @@ G
 - [ x ] CSS till Sass
 - [ ] Enhetlig namngivning i CSS:en
 - [ x ] Konvertera till TypeScript
-- [ ] Enhetlig kodkvalitet
+- [ x ] Enhetlig kodkvalitet
 - [ x ] Mobilvyn
 - [ x ] Språk
 - [ x ] Rensa loggning
