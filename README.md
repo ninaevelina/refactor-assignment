@@ -1,4 +1,4 @@
-# Arbetsmetodik - Inlämninguppgift 1
+# Arbetsmetodik - Inlämningsuppgift 1
 
 Inlämningsuppgift 1 i kursen Arbetsmetodik på Medieinstitutet. Uppgiftens examinationsmoment är bl.a. att refaktorera kod, hitta optimala lösningar med hjälp av felsökning, gitflow och användning av andra arbetsmetodiker.
 
